@@ -1,0 +1,64 @@
+package mx.unam.ciencias.icc;
+
+import java.io.IOException;
+import java.net.Socket;
+import javafx.application.Platform;
+
+/**
+ * Clase para hilos de ejecución que manejan conexiones de los clientes al
+ * servidor.
+ */
+public class HiloCliente<T extends Registro> extends HiloConexion<T> {
+
+    /* Lista de escuchas. */
+    private Lista<EscuchaHiloCliente> escuchas;
+    /* Bandera de sincronización. */
+    private boolean espera;
+    /* Bandera de terminación. */
+    private boolean terminado;
+    /* Bandera para ignorar peticiones de aviso.  */
+    private boolean ignorar;
+
+    /**
+     * Crea un nuevo hilo de ejecución para manejar la conexión de un cliente al
+     * servidor.
+     * @param bdd la base de datos.
+     * @param enchufe el enchufe conectado al servidor.
+     * @throws IOException si ocurre un error de entrada o salida.
+     */
+    public HiloCliente(BaseDeDatos<T> bdd, Socket enchufe)
+        throws IOException {
+        // Aquí va su código.
+    }
+
+    /**
+     * Método principal del hilo de ejecución.
+     */
+    public void run() {
+        // Aquí va su código.
+    }
+
+    /**
+     * Avisa un cambio al servidor.
+     * @param evento el evento ocurrido.
+     * @param registro el registro afectado.
+     */
+    public void avisaServidor(EventoBaseDeDatos evento, T registro) {
+        // Aquí va su código.
+    }
+
+    /**
+     * Cierra la conexión con el servidor.
+     */
+    @Override public void desconecta() {
+        // Aquí va su código.
+    }
+
+    /**
+     * Agrega un escucha al hilo.
+     * @param escucha el escucha a agregar.
+     */
+    public void agregaEscucha(EscuchaHiloCliente escucha) {
+        // Aquí va su código.
+    }
+}

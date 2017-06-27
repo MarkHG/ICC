@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="background"
+            minWidth="360.0" minHeight="115.0"
+            prefWidth="360.0" prefHeight="115.0"
+            fx:controller="mx.unam.ciencias.icc.ControladorFormaConectar"
+            xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <GridPane minWidth="360.0" minHeight="115.0"
+              prefWidth="360.0" prefHeight="115.0"
+              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" >
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="70.0" prefWidth="70.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="300.0" prefWidth="240.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      </rowConstraints>
+      <children>
+        <Label text="Servidor:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Puerto:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="servidor" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   minWidth="10.0" maxWidth="300.0" prefWidth="250.0" />
+        <TextField fx:id="puerto" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                   minWidth="10.0" maxWidth="300.0" prefWidth="250.0" />
+      </children>
+    </GridPane>
+    <ButtonBar AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <buttons>
+        <Button mnemonicParsing="false" onAction="#conectar"
+                text="Conectar" prefWidth="115.0" />
+        <Button mnemonicParsing="false" onAction="#cancelar"
+                text="Cancelar" prefWidth="115.0" defaultButton="true" />
+      </buttons>
+    </ButtonBar>
+  </children>
+</AnchorPane>
